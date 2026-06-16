@@ -10,7 +10,7 @@ namespace OOP_Part1
         public string RoomType { get; set; }
         public double PricePerNight { get; set; }
 
-        public void displayRoom()
+        public void DisplayRoom()
         {
 
         }
