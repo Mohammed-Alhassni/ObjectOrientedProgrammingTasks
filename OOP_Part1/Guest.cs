@@ -27,6 +27,7 @@ namespace OOP_Part1
 
                 Guest ID: {GuestId}
                 Guest Name: {GuestName}
+                Check-in Date: {CheckinDate}
                 Number of nights planned to stay: {TotalNights}
 
                 """;
