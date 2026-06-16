@@ -14,7 +14,7 @@
                 new Room(6, "Suite", 95),
             };
 
-            List<Guest> guest = new List<Guest>();
+            List<Guest> guests = new List<Guest>();
 
             int option = -1;
             bool interacting = true;
@@ -86,13 +86,13 @@
 
             Console.Write("\nEnter room number: ");
             int roomNumber;
-            int roomNumbertemp = int.Parse(Console.ReadLine());
+            int roomNumberTemp = int.Parse(Console.ReadLine());
 
-            if (roomsList.Any(r => r.RoomNumber == roomNumbertemp) == false && roomNumbertemp > 0)
+            if (roomsList.Any(r => r.RoomNumber == roomNumberTemp) == false && roomNumberTemp > 0)
             {
-                roomNumber = roomNumbertemp;
+                roomNumber = roomNumberTemp;
             } 
-            else if (roomNumbertemp <= 0)
+            else if (roomNumberTemp <= 0)
             {
                 Console.WriteLine("Room number cannot be zero or negitive. ");
                 Thread.Sleep(3000);
