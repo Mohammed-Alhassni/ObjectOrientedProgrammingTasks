@@ -9,10 +9,18 @@ namespace OOP_Part1
         public int RoomNumber { get; set; }
         public string RoomType { get; set; }
         public double PricePerNight { get; set; }
-
-        public void DisplayRoom()
+        public string DisplayRoom(bool show= true)
         {
+            string newRoom= $"""
 
+                Room Number: {RoomNumber}
+                Room Type: {RoomType}
+                Price Per Night: {PricePerNight}
+
+                """;
+
+            if (show) { Console.WriteLine(newRoom);  }
+            return newRoom;
         }
     }
 }
