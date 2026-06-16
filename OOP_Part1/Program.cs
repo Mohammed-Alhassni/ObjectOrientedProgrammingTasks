@@ -222,6 +222,18 @@
 
             targetGuest.RoomNumber = targetRoom.RoomNumber;
             targetRoom.IsAvailable = false;
+
+            Console.WriteLine($""""
+
+                Guest Name: {targetGuest.GuestName}
+                Room Number: {targetRoom.RoomNumber}
+                Price per Night: {targetRoom.PricePerNight}
+                Total Night: {targetGuest.TotalNights}
+                Total Cost: {targetGuest.CalculateTotalCost(targetRoom.PricePerNight)}
+
+                """");
+
+            Console.ReadKey();
         }
     }
 }
