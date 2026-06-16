@@ -79,8 +79,8 @@
                         Console.WriteLine("Invalid Option");
                         Thread.Sleep(2000);
                         break;
-                }          
-            }  
+                }
+            }
         }
 
         static void CreateRoom(ref List<Room> roomsList)
@@ -94,7 +94,7 @@
             if (roomsList.Any(r => r.RoomNumber == roomNumberTemp) == false && roomNumberTemp > 0)
             {
                 roomNumber = roomNumberTemp;
-            } 
+            }
             else if (roomNumberTemp <= 0)
             {
                 Console.WriteLine("Room number cannot be zero or negitive. ");
@@ -127,9 +127,9 @@
             double pricePerNight;
             double pricePerNightTemp = double.Parse(Console.ReadLine());
             if (pricePerNightTemp > 0)
-            { 
+            {
                 pricePerNight = pricePerNightTemp;
-            } 
+            }
             else
             {
                 Console.WriteLine("Room price cannot be zero or negitive. ");
@@ -146,9 +146,33 @@
         }
         static void RegisterNewGuest(ref List<Guest> guestsList)
         {
-    }
-}
+            Console.ForegroundColor = ConsoleColor.Green;
 
+            string guestId = $"G{guestsList.Count:3}";
+
+            Console.Write("\nEnter guest name: ");
+            string guestName = Console.ReadLine();
+
+            Console.Write("Enter number of nights planned to stay: ");
+            int numberOfNights;
+            int numberOfNightsTemp = int.Parse(Console.ReadLine());
+            if (numberOfNightsTemp > 0)
+            {
+                numberOfNights = numberOfNightsTemp;
+            }
+            else
+            {
+                Console.WriteLine("Room price cannot be zero or negitive. ");
+                Thread.Sleep(3000);
+                return;
+            }
+
+            guestsList.Add(new Guest(guestId, guestName, numberOfNights));
+
+            Console.WriteLine($"\nGuest Added:\n{guestsList[guestsList.Count - 1].DisplayGuest(false)}\nGuests Count: {guestsList.Count}");
+            Thread.Sleep(40000);
+
+            Console.ResetColor();
         }
     }
 }
