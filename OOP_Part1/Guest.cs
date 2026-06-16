@@ -9,10 +9,10 @@ namespace OOP_Part1
         public string GuestId { get; set; }
         public string GuestName { get; set; }
         public int RoomNumber { get; set; }
-        public DateTime CheckinDate { get; set; }
+        public string CheckinDate { get; set; }
         public int TotalNights { get; set; }
 
-        public Guest(string id, string name, int nights, int roomNumber = 0, DateTime date = new DateTime())
+        public Guest(string id, string name, int nights, string date, int roomNumber = 0)
         {
             GuestId = id;
             GuestName = name;
