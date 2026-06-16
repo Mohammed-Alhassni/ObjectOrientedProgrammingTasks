@@ -156,6 +156,9 @@
             Console.Write("\nEnter guest name: ");
             string guestName = Console.ReadLine();
 
+            Console.Write("\nEnter check-in: ");
+            string checkInDate = Console.ReadLine();
+
             Console.Write("Enter number of nights planned to stay: ");
             int numberOfNights;
             int numberOfNightsTemp = int.Parse(Console.ReadLine());
@@ -170,7 +173,7 @@
                 return;
             }
 
-            guestsList.Add(new Guest(guestId, guestName, numberOfNights));
+            guestsList.Add(new Guest(guestId, guestName, numberOfNights, checkInDate));
 
             Console.WriteLine($"\nGuest Added:\n{guestsList[guestsList.Count - 1].DisplayGuest(false)}\nGuests Count: {guestsList.Count}");
             Thread.Sleep(40000);
