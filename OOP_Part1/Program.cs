@@ -69,6 +69,9 @@
                     case 1:
                         CreateRoom(ref rooms);
                         break;
+                    case 2:
+                        RegisterNewGuest(ref guests);
+                        break;
                     case 0:
                         interacting = false;
                         break;
@@ -140,6 +143,12 @@
             Thread.Sleep(4000);
 
             Console.ResetColor();
+        }
+        static void RegisterNewGuest(ref List<Guest> guestsList)
+        {
+    }
+}
+
         }
     }
 }
