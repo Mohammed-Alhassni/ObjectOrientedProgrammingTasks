@@ -183,8 +183,8 @@
 
         static void BookRoom(ref List<Room> roomsList, ref List<Guest> guestsList)
         {
-            string targetGuestId;
-            int targetRoomId;
+            Guest targetGuest;
+            Room targetRoom;
 
             Console.Write("Enter guest ID: ");
             string targetGuestIdTemp = Console.ReadLine();
@@ -194,7 +194,13 @@
 
             if (roomsList.FirstOrDefault(r => r.RoomNumber == targetRoomIdTemp) != null)
             {
-                targetRoomId = targetRoomIdTemp;
+                targetRoom = roomsList.FirstOrDefault(r => r.RoomNumber == targetRoomIdTemp);
+                if (targetRoom.IsAvailable == false)
+                {
+                    Console.WriteLine("Room is already booked. ");
+                    Thread.Sleep(3000);
+                    return;
+            }
             }
             else
             {
@@ -205,7 +211,7 @@
 
             if (guestsList.FirstOrDefault(g => g.GuestId.ToLower().Equals(targetGuestIdTemp.ToLower())) != null)
             {
-                targetGuestId = guestsList.FirstOrDefault(g => g.GuestId.ToLower().Equals(targetGuestIdTemp.ToLower())).GuestId;
+                targetGuest = guestsList.FirstOrDefault(g => g.GuestId.ToLower().Equals(targetGuestIdTemp.ToLower()));
             }
             else
             {
