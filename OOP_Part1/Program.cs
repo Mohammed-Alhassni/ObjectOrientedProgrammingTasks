@@ -58,7 +58,7 @@
                 switch (option)
                 {
                     case 1:
-
+                        CreateRoom(ref rooms);
                         break;
                     case 0:
                         interacting = false;
@@ -68,7 +68,11 @@
                         Thread.Sleep(2000);
                         break;
                 }          
-            }
+            }  
+        }
+
+        static void CreateRoom(ref List<Room> roomsList)
+        {
 
         }
     }
