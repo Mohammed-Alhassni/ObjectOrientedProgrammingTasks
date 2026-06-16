@@ -151,12 +151,12 @@
         {
             Console.ForegroundColor = ConsoleColor.Green;
 
-            string guestId = $"G{guestsList.Count:3}";
+            string guestId = $"G{guestsList.Count+1:D3}";
 
             Console.Write("\nEnter guest name: ");
             string guestName = Console.ReadLine();
 
-            Console.Write("\nEnter check-in date: ");
+            Console.Write("Enter check-in date: ");
             string checkInDate = Console.ReadLine();
 
             Console.Write("Enter number of nights planned to stay: ");
@@ -176,7 +176,7 @@
             guestsList.Add(new Guest(guestId, guestName, numberOfNights, checkInDate));
 
             Console.WriteLine($"\nGuest Added:\n{guestsList[guestsList.Count - 1].DisplayGuest(false)}\nGuests Count: {guestsList.Count}");
-            Thread.Sleep(40000);
+            Thread.Sleep(4000);
 
             Console.ResetColor();
         }
