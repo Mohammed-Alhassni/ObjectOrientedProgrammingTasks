@@ -89,6 +89,20 @@
                 return;
             }
 
+            Console.Write("Enter room type (Single / Double / Suite): ");
+            string roomType;
+            string roomTypeTemp = Console.ReadLine();
+            string[] types = ["single", "double", "suite"];
+            if (types.Contains(roomTypeTemp.ToLower()))
+            {
+                roomType = roomTypeTemp.Substring(0, 1) + roomTypeTemp.Substring(1).ToLower();
+            }
+            else
+            {
+                Console.WriteLine("Invalid input, it should be: Single / Double / Suite.");
+                Thread.Sleep(3000);
+                return;
+            }
         }
     }
 }
