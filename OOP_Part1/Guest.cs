@@ -21,6 +21,18 @@ namespace OOP_Part1
             TotalNights = nights;
         }
 
+        public string DisplayGuest(bool show = true)
+        {
+            string newGuest = $"""
+
+                Guest ID: {GuestId}
+                Guest Name: {GuestName}
+                Number of nights planned to stay: {TotalNights}
+
+                """;
+
+            if (show) { Console.WriteLine(newGuest); }
+            return newGuest;
         }
 
         public double CalculateTotalCost()
