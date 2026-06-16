@@ -156,7 +156,7 @@
             Console.Write("\nEnter guest name: ");
             string guestName = Console.ReadLine();
 
-            Console.Write("\nEnter check-in: ");
+            Console.Write("\nEnter check-in date: ");
             string checkInDate = Console.ReadLine();
 
             Console.Write("Enter number of nights planned to stay: ");
