@@ -36,9 +36,9 @@ namespace OOP_Part1
             return newGuest;
         }
 
-        public double CalculateTotalCost()
+        public double CalculateTotalCost(double price)
         {
-            return 0;
+            return TotalNights * price;
         }
     }
 }
