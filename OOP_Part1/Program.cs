@@ -73,6 +73,21 @@
 
         static void CreateRoom(ref List<Room> roomsList)
         {
+            Console.ForegroundColor = ConsoleColor.Green;
+
+            Console.Write("\nEnter room number: ");
+            int roomNumber;
+            int roomNumbertemp = int.Parse(Console.ReadLine());
+
+            if (roomsList.Any(r => r.RoomNumber == roomNumbertemp) == false)
+            {
+                roomNumber = roomNumbertemp;
+            } else
+            {
+                Console.WriteLine("This room number already exist. ");
+                Thread.Sleep(3000);
+                return;
+            }
 
         }
     }
