@@ -219,6 +219,9 @@
                 Thread.Sleep(3000);
                 return;
             }
+
+            targetGuest.RoomNumber = targetRoom.RoomNumber;
+            targetRoom.IsAvailable = false;
         }
     }
 }
