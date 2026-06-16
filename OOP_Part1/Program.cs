@@ -183,6 +183,14 @@
 
         static void BookRoom(ref List<Room> roomsList, ref List<Guest> guestsList)
         {
+            string targetGuestId;
+            int targetRoomId;
+
+            Console.Write("Enter guest ID: ");
+            string targetGuestIdTemp = Console.ReadLine();
+
+            Console.Write("Enter room number: ");
+            int targetRoomIdTemp = int.Parse(Console.ReadLine());
 
         }
     }
