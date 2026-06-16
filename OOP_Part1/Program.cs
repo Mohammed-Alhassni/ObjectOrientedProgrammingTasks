@@ -192,6 +192,27 @@
             Console.Write("Enter room number: ");
             int targetRoomIdTemp = int.Parse(Console.ReadLine());
 
+            if (roomsList.FirstOrDefault(r => r.RoomNumber == targetRoomIdTemp) != null)
+            {
+                targetRoomId = targetRoomIdTemp;
+            }
+            else
+            {
+                Console.WriteLine("This room does not exist. ");
+                Thread.Sleep(3000);
+                return;
+            }
+
+            if (guestsList.FirstOrDefault(g => g.GuestId.ToLower().Equals(targetGuestIdTemp.ToLower())) != null)
+            {
+                targetGuestId = guestsList.FirstOrDefault(g => g.GuestId.ToLower().Equals(targetGuestIdTemp.ToLower())).GuestId;
+            }
+            else
+            {
+                Console.WriteLine("This guest does not exist. ");
+                Thread.Sleep(3000);
+                return;
+            }
         }
     }
 }
