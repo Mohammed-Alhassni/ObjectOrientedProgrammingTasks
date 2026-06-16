@@ -4,7 +4,9 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            List<Room> rooms= new List<Room>();
+            List<Guest> guest= new List<Guest>();
+
         }
     }
 }
