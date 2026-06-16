@@ -103,6 +103,10 @@
                 Thread.Sleep(3000);
                 return;
             }
+
+            Console.Write("Enter room price per night: ");
+            double pricePerNight = double.Parse(Console.ReadLine());
+
         }
     }
 }
