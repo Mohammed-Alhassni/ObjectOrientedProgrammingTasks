@@ -107,6 +107,12 @@
             Console.Write("Enter room price per night: ");
             double pricePerNight = double.Parse(Console.ReadLine());
 
+            roomsList.Add(new Room(roomNumber, roomType, pricePerNight));
+
+            Console.WriteLine($"\nRoom Added:\n{roomsList[roomsList.Count-1].DisplayRoom(false)}\nRooms Count: {roomsList.Count}");
+            Thread.Sleep(4000);
+
+            Console.ResetColor();
         }
     }
 }
