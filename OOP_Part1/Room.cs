@@ -9,12 +9,14 @@ namespace OOP_Part1
         public int RoomNumber { get; set; }
         public string RoomType { get; set; }
         public double PricePerNight { get; set; }
+        public bool IsAvailable { get; set; }
 
-        public Room(int number, string type, double price)
+        public Room(int number, string type, double price, bool available = true)
         {
             RoomNumber = number;
             RoomType = type;
             PricePerNight = price;
+            IsAvailable = available;
         }
 
         public string DisplayRoom(bool show= true)
