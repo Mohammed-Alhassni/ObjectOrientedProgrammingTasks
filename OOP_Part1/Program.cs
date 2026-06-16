@@ -4,8 +4,17 @@
     {
         static void Main(string[] args)
         {
-            List<Room> rooms= new List<Room>();
-            List<Guest> guest= new List<Guest>();
+            List<Room> rooms = new List<Room>()
+            {
+                new Room(1, "Single", 20),
+                new Room(2, "Double", 30),
+                new Room(3, "Suite", 55),
+                new Room(4, "Single", 40),
+                new Room(5, "Double", 70),
+                new Room(6, "Suite", 95),
+            };
+
+            List<Guest> guest = new List<Guest>();
 
             int option = -1;
             bool interacting = true;
