@@ -79,10 +79,17 @@
             int roomNumber;
             int roomNumbertemp = int.Parse(Console.ReadLine());
 
-            if (roomsList.Any(r => r.RoomNumber == roomNumbertemp) == false)
+            if (roomsList.Any(r => r.RoomNumber == roomNumbertemp) == false && roomNumbertemp > 0)
             {
                 roomNumber = roomNumbertemp;
-            } else
+            } 
+            else if (roomNumbertemp <= 0)
+            {
+                Console.WriteLine("Room number cannot be zero or negitive. ");
+                Thread.Sleep(3000);
+                return;
+            }
+            else
             {
                 Console.WriteLine("This room number already exist. ");
                 Thread.Sleep(3000);
@@ -105,7 +112,18 @@
             }
 
             Console.Write("Enter room price per night: ");
-            double pricePerNight = double.Parse(Console.ReadLine());
+            double pricePerNight;
+            double pricePerNightTemp = double.Parse(Console.ReadLine());
+            if (pricePerNightTemp > 0)
+            { 
+                pricePerNight = pricePerNightTemp;
+            } 
+            else
+            {
+                Console.WriteLine("Room price cannot be zero or negitive. ");
+                Thread.Sleep(3000);
+                return;
+            }
 
             roomsList.Add(new Room(roomNumber, roomType, pricePerNight));
 
