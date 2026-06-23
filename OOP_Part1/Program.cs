@@ -232,7 +232,8 @@
                 Total Cost: {targetGuest.CalculateTotalCost(targetRoom.PricePerNight)}
 
                 """");
-
+            
+            Console.Write("Press any key to continue.");
             Console.ReadKey();
         }
     }
